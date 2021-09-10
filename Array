@@ -1,0 +1,148 @@
+//Insert:
+//here number of element is n=10;
+
+package uri_10_9_2020;
+
+import java.util.Scanner;
+
+public class InsertArray {
+    public static void main(String[] args) {
+         int posi,num;
+        
+        Scanner input = new Scanner(System.in);
+        int[] array = new int[10+1];
+        for (int i = 0; i < 10; i++) {
+            array[i]=input.nextInt();
+        }
+       
+        posi=input.nextInt();
+        num=input.nextInt();
+        
+        for (int i = 10-1; i >= posi; i--) {
+            array[i+1]=array[i];
+            
+        }
+        array[posi-1]=num;
+        
+        for (int i = 0; i < 10+1; i++) {
+            System.out.printf("%d",array[i]);
+        }
+    }
+}
+
+
+//c
+
+#include<stdio.h>
+int main()
+{
+
+    int a[10],n,num,insert,i;
+
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&a[i]);
+
+    }
+    scanf("%d",&insert);
+    scanf("%d",&num);
+    for(i=10;i>=insert;i--)
+    {
+
+       a[i]=a[i-1];
+        //a[insert]=num;
+    }
+    a[insert-1]=num;
+    for(i=0;i<10+1;i++)
+    {
+        printf("%d  ",a[i]);
+    }
+}
+
+
+//Python:
+
+my_input = [1, 2, 3, 4, 5]
+ 
+print(f'Current Numbers List {my_input}')
+ 
+number = int(input("Please enter a number to be added:\n"))
+ 
+index = int(input(f'Enter the index between 0 and {len(my_input) - 1} to add the given number:\n'))
+ 
+my_input.insert(index, number)
+ 
+print(f'Updated List {my_input}')
+
+
+
+
+delatation:
+
+//here number of element is n=10;
+
+package uri_10_9_2020;
+
+import java.util.Scanner;
+
+
+public class ArrayData {
+    public static void main(String[] args) {
+        
+    
+    int [] array;
+      int position;
+    array=new int[10];
+    Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+            array[i]=input.nextInt();
+        }
+      
+        position = input.nextInt();
+        for (int i = position; i < 10-1; i++) {
+            array[i]=array[i+1];
+            
+        }
+        for (int i = 0; i < 10-1; i++) {
+            System.out.printf("%d ",array[i]);
+        }
+    
+}
+}
+
+//c:
+
+#include<stdio.h>
+int main()
+{
+    int a[10],index,i,j;
+    for(i=0;i<10;i++){
+
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&index);
+
+    for(i=index;i<10-1;i++)
+    {
+
+        a[i]=a[i+1];
+        //j++;
+    }
+    for(i=0;i<10-1;i++)
+    {
+
+        printf("%d",a[i]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
